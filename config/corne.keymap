@@ -9,6 +9,21 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        screenshotarea: screenshotarea {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LS(NUMBER_4)>;
+            label = "SCREENSHOTAREA";
+        };
+        screenshotwhole: screenshotwhole {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LS(NUMBER_3)>;
+            label = "SCREENSHOTWHOLE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -62,10 +77,10 @@
 
         layer_3 {
             bindings = <
-&kp ESC    &trans  &trans  &trans  &trans  &trans    &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
-&kp TAB    &trans  &trans  &trans  &trans  &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans          &trans           &trans  &trans
-                           &to 0   &trans  &trans    &kp SPACE  &trans          &kp LALT
+&kp ESC    &trans  &trans  &screenshotwhole  &screenshotarea  &trans    &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
+&kp TAB    &trans  &trans  &trans            &trans           &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp LSHFT  &trans  &trans  &trans            &trans           &trans    &trans     &trans          &trans          &trans           &trans  &trans
+                           &to 0             &trans           &trans    &kp SPACE  &trans          &kp LALT
             >;
         };
     };
