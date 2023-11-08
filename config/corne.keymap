@@ -62,10 +62,10 @@
 
         layer_3 {
             bindings = <
-&kp ESC    &trans  &trans  &trans    &trans  &trans    &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
-&kp TAB    &trans  &trans  &trans    &trans  &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&kp LSHFT  &trans  &trans  &trans    &trans  &trans    &trans     &trans          &trans          &trans           &trans  &trans
-                           &kp LGUI  &trans  &trans    &kp SPACE  &trans          &kp LALT
+&kp ESC    &trans  &trans  &trans  &trans  &trans    &trans     &trans          &kp UP_ARROW    &trans           &trans  &trans
+&kp TAB    &trans  &trans  &trans  &trans  &trans    &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans    &trans     &trans          &trans          &trans           &trans  &trans
+                           &to 0   &trans  &trans    &kp SPACE  &trans          &kp LALT
             >;
         };
     };
